@@ -1,6 +1,6 @@
 import { Base } from './base'
 import * as chalk from 'chalk'
-import * as passwordPrompt from 'password-prompt'
+const passwordPrompt = require('password-prompt')
 
 export interface IPromptOptions {
   prompt?: string

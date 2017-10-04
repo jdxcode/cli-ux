@@ -1,7 +1,7 @@
 import * as path from 'path'
 import * as util from 'util'
 import { Config } from './config'
-import * as stripAnsi from 'strip-ansi'
+import stripAnsi = require('strip-ansi')
 import * as fs from 'fs-extra'
 import * as moment from 'moment'
 

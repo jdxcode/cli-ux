@@ -16,7 +16,7 @@ export class CLI extends Base {
 
   constructor() {
     super()
-    if (Config.mock) chalk.enabled = false
+    if (Config.mock) (<any>chalk).enabled = true
   }
 
   private _prompt: Prompt

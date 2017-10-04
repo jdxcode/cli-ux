@@ -2,8 +2,8 @@ import { ActionBase } from './base'
 import { Config } from '../config'
 import screen from '../screen'
 import * as supportsColor from 'supports-color'
-import * as ansiEscapes from 'ansi-escapes'
-import * as stripAnsi from 'strip-ansi'
+const ansiEscapes = require('ansi-escapes')
+import stripAnsi = require('strip-ansi')
 import * as ansiStyles from 'ansi-styles'
 import * as chalk from 'chalk'
 

@@ -1,6 +1,6 @@
 import { StreamOutput } from './stream'
 import _ from 'ts-lodash'
-import * as stripAnsi from 'strip-ansi'
+import stripAnsi = require('strip-ansi')
 
 export type TableColumn = {
   key: string
@@ -78,8 +78,6 @@ export function table(stream: StreamOutput, data: any[], inputOptions: Partial<T
       this.printRow(cells.map(hdr => hdr.replace(/./g, '─')))
     },
   }
-
-  let colDefaults = {}
 
   function calcWidth(cell: any) {
     let lines = stripAnsi(cell).split(/[\r\n]+/)
