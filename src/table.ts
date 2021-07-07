@@ -46,7 +46,7 @@ export function table(stream: StreamOutput, data: any[], inputOptions: Partial<T
   const options: TableOptions = {
     ...inputOptions,
     columns: (inputOptions.columns || []).map(c => ({
-      format: (value: any) => (value ? value.toString() : ''),
+      format: (value: any) => (value != null ? value.toString() : ''),
       width: 0,
       label: function() {
         return this.key.toString()
